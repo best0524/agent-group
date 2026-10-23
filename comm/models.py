@@ -12,10 +12,3 @@ class TopicInfo:
 class Message:
     sender_id: str
     payload: str
-
-
-@dataclass(frozen=True)
-class PeerInfo:
-    agent_id: str
-    address: str
-    is_connected: bool
