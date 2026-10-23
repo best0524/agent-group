@@ -55,7 +55,7 @@ def _open_semaphore(name: str, *, create: bool = False) -> int:
 class SharedMemoryTransport:
     """本机节点公告，以及每个 agent、topic 独立的共享内存收件箱。"""
 
-    ANNOUNCEMENT_SLOTS = 64
+    ANNOUNCEMENT_SLOTS = 1024
     ANNOUNCEMENT_BYTES = 64 * 1024
     INBOX_BYTES = 1024 * 1024
     _LENGTH = struct.Struct("!I")
